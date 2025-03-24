@@ -1,30 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const burgerIcon = document.getElementById("burger-icon"); // <object> с SVG
+  const burgerIcon = document.getElementById("burger-icon");
   const dropdown = document.getElementById("dropdown");
   const closeMenu = document.getElementById("close-menu");
 
-  // Обработка загрузки SVG внутри <object>
-  burgerIcon.addEventListener("load", function () {
-    const svgDoc = burgerIcon.contentDocument;
-    const svgElement = svgDoc.querySelector("svg");
+  const whiteSrc = "./img/elements/close-burger-white.svg";
+  const redSrc = "./img/elements/close-burger-red.svg";
 
-    if (svgElement) {
-      svgElement.addEventListener("click", function (event) {
-        event.stopPropagation();
-        dropdown.classList.toggle("active");
-      });
-    }
-  });
+  // Открытие/закрытие меню
+  document
+    .getElementById("burger-menu")
+    .addEventListener("click", function (event) {
+      event.stopPropagation();
+      dropdown.classList.toggle("active");
+    });
 
-  // Закрытие меню по клику на кнопку закрытия
+  // Закрытие меню
   closeMenu.addEventListener("click", function () {
     dropdown.classList.remove("active");
   });
 
-  // Закрытие меню по клику вне dropdown
+  // Закрытие при клике вне меню
   document.addEventListener("click", function (event) {
-    if (!dropdown.contains(event.target)) {
+    if (!dropdown.contains(event.target) && event.target !== burgerIcon) {
       dropdown.classList.remove("active");
     }
+  });
+
+  // Меняем иконку при наведении
+  burgerIcon.addEventListener("mouseenter", function () {
+    burgerIcon.src = redSrc;
+  });
+
+  burgerIcon.addEventListener("mouseleave", function () {
+    burgerIcon.src = whiteSrc;
   });
 });
