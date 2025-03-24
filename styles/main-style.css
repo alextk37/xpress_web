@@ -1,0 +1,526 @@
+@font-face {
+  font-family: "FRANKINITY";
+  src: url("../fonts/FRANKINITY.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tenor";
+  src: url("../fonts/TenorSans-Regular.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.gr {
+  display: grid;
+}
+
+.header-block {
+  height: 620px; /* Высота хедера */
+  display: flex;
+  padding: 0 2rem;
+  align-items: flex-start;
+  position: relative;
+}
+
+.left-block {
+  background: #333 url("../img/background/black-wood-texture.jpg") no-repeat
+    center/cover;
+  background-blend-mode: normal;
+}
+
+.right-block {
+  background-color: white; /* Белый фон */
+  padding: 0;
+}
+
+.text-block {
+  width: 100%;
+  font-family: "FRANKINITY", Arial, sans-serif;
+  font-size: 70px; /* Размер шрифта */
+  color: white; /* Цвет текста */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  z-index: 2;
+}
+
+.last-words {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.first-word {
+  display: flex;
+  gap: 130px;
+}
+
+.image-container {
+  width: 100px; /* Ширина контейнера для изображения */
+  margin-bottom: 10px; /* Отступ снизу */
+}
+
+.header-image {
+  width: 270px; /* Изображение занимает всю ширину контейнера */
+  height: auto; /* Сохраняем пропорции */
+}
+
+#burger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+#burger-icon {
+  display: block;
+  height: 45px;
+}
+
+.hidden-brand {
+  display: none;
+  height: 100%;
+  width: 50%;
+  font-family: "Tenor", Arial, sans-serif;
+}
+
+.hidden-brand-text {
+  max-width: 100%;
+}
+
+.hidden-brand-text h2 {
+  font-size: 22px;
+  overflow-wrap: break-word;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.hidden-brand-text p {
+  font-size: 16px;
+  padding: 5px;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 190px;
+  right: 22%;
+  width: 290px;
+  height: 460px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  background-color: #333333;
+  z-index: -1; /* Убедитесь, что блок находится над другими элементами */
+  overflow: hidden; /* Обрезаем всё, что выходит за границы */
+}
+
+.image-overlay img {
+  width: 190px;
+  height: auto;
+  margin-bottom: 50px;
+  object-fit: cover;
+  transform-origin: center; /* Увеличение от центра */
+  transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out; /* Плавные переходы */
+}
+
+/* Изменения при наведении на изображение */
+.image-overlay img:hover {
+  transform: scale(2.3); /* Увеличение */
+  opacity: 0.3; /* Полупрозрачность */
+}
+
+.overlay-text {
+  font-family: "Tenor", Arial, sans-serif;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Центрирование текста */
+  color: white; /* Цвет текста */
+  font-size: 22px; /* Размер текста */
+  font-weight: bold;
+  opacity: 0; /* Изначально текст невидим */
+  transition: opacity 0.4s ease-in-out; /* Плавное появление */
+  text-align: center; /* Выравнивание текста по центру */
+  pointer-events: none; /* Текст не перехватывает события мыши */
+  max-height: 190px;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+/* Текст появляется только при наведении на изображение */
+.image-overlay img:hover ~ .overlay-text {
+  opacity: 1; /* Текст становится видимым */
+}
+
+.brand-card {
+  position: absolute;
+  top: 300px;
+  left: -30%;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.image-content {
+  display: flex;
+  width: 130%;
+}
+
+.image-content img {
+  height: 180px;
+  width: auto;
+}
+
+.black-rectangle {
+  background-color: black;
+  margin-left: 15px;
+  height: 110px;
+  width: 100%;
+}
+
+.brand-content {
+  width: 40%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-content img {
+  height: 70px;
+  width: 460px;
+}
+
+.description {
+  position: absolute;
+  top: 65px;
+  left: 75%;
+  color: black;
+  font-size: 30px;
+  font-family: "Tenor", Arial, sans-serif;
+}
+.features {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  font-family: "Tenor", Arial, sans-serif;
+  font-size: 20px;
+}
+
+.top-features {
+  position: absolute;
+  translate: -42%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+}
+
+.top-features img {
+  height: auto;
+  max-width: 380px;
+  margin-bottom: 170px;
+}
+
+.top-features-card {
+  display: flex;
+  background-color: red;
+  color: rgb(255, 255, 255);
+  flex-direction: column;
+  align-items: center;
+  width: 430px;
+  height: 410px;
+  gap: 10px;
+}
+
+.top-features-card h2 {
+  font-family: "FRANKINITY", Arial, sans-serif;
+  font-size: 70px;
+  margin-top: 90px;
+  margin-right: 100px;
+}
+
+.top-features-card-content {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+
+.top-features-card-content p {
+  position: absolute;
+  right: -30px;
+  border-left: 3px solid white;
+  padding-left: 10px;
+  font-size: 16px;
+  font-family: "Tenor", Arial, sans-serif;
+  width: 200px;
+  height: 120px;
+}
+
+.top-features-card-content img {
+  position: absolute;
+  left: 75px;
+  height: 175px;
+  bottom: -335px;
+  z-index: 0;
+}
+
+.middle-features {
+  position: absolute;
+  top: 210px;
+  translate: -55%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  z-index: -1;
+}
+
+.middle-features img {
+  position: absolute;
+  top: 190px;
+  right: 370px;
+  height: auto;
+  width: 350px;
+  margin-bottom: 200px;
+}
+
+.middle-features-black-rectangle {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  right: 200px;
+  width: 100px;
+  height: 520px;
+  background-color: black;
+}
+
+.question-block {
+  color: white;
+  position: relative;
+}
+
+.question-block p {
+  position: absolute;
+  width: 30px;
+  font-size: 18px;
+  bottom: 30px;
+  left: -40px;
+}
+
+.question-block span {
+  position: absolute;
+  font-family: "FRANKINITY", Arial, sans-serif;
+  font-size: 140px;
+  bottom: -55px;
+  left: 35px;
+}
+
+.middle-features-card {
+  position: absolute;
+  display: flex;
+  background-color: black;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  width: 430px;
+  height: 390px;
+}
+
+.middle-features-card h2 {
+  font-family: "FRANKINITY", Arial, sans-serif;
+  font-size: 70px;
+  margin-top: 50px;
+  margin-left: 105px;
+}
+
+.middle-features-card-content {
+  display: flex;
+  position: relative;
+}
+
+.middle-features-card-content p {
+  border-left: 3px solid white;
+  padding-left: 10px;
+  font-size: 16px;
+  font-family: "Tenor", Arial, sans-serif;
+  max-width: 50%;
+  height: 120px;
+  margin-top: 40px;
+  margin-left: 230px;
+}
+
+.middle-features-card-content img {
+  position: absolute;
+  left: 37px;
+  top: 40px;
+  height: 175px;
+  width: auto;
+}
+
+.bottom-features {
+  position: relative;
+  background-color: red;
+  z-index: -2;
+  height: 600px;
+  width: 100%;
+  top: 550px;
+  display: flex;
+  justify-content: center;
+}
+
+.bottom-features-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.bottom-features-card h2 {
+  position: absolute;
+  font-family: "FRANKINITY", Arial, sans-serif;
+  font-size: 80px;
+  left: 40%;
+  top: 80px;
+}
+
+.message-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+}
+
+.message-block-content {
+  display: flex;
+  justify-content: center;
+}
+
+.message-block-content span {
+  position: absolute;
+  right: 70%;
+  bottom: -65px;
+  font-family: "FRANKINITY", Arial, sans-serif;
+  font-size: 140px;
+}
+
+.message-block-content-text {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  margin-left: 50px;
+}
+
+.message-block-content-text p {
+  font-size: 20px;
+  font-family: "Tenor", Arial, sans-serif;
+}
+
+.message-block-content-icons {
+}
+
+.message-block-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-block-form input {
+  max-width: 80%;
+  margin-bottom: 5px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.message-block-form button {
+  border: 0;
+  border-radius: 5px;
+  background-color: white;
+  color: red;
+}
+
+/* Медиазапросы */
+
+@media (max-width: 995px) {
+  .text-block {
+    align-items: flex-start;
+  }
+  .first-word {
+    font-size: 45px;
+    gap: 20px;
+  }
+  .last-words {
+    font-size: 45px;
+  }
+
+  #burger-menu {
+    margin-bottom: 25px;
+  }
+  #burger-icon {
+    height: 30px;
+  }
+}
+
+@media (max-width: 770px) {
+  .right-block {
+    display: none; /* Скрываем блок */
+  }
+
+  .first-word {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .image-overlay {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    position: relative; /* Относительное позиционирование */
+    width: 100%;
+    background-color: transparent;
+    height: 360px;
+    top: 0;
+    right: auto;
+    left: auto;
+  }
+
+  .image-overlay img:hover {
+    transform: none; /* Отменяем увеличение */
+    opacity: 1; /* Возвращаем прозрачность к исходной */
+  }
+
+  .overlay-text {
+    display: none;
+  }
+
+  .image-overlay img {
+    width: calc(50% - 10px);
+    height: 100%;
+    margin-bottom: 10px;
+    border: solid #333333 10px;
+  }
+
+  .hidden-brand {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+  }
+
+  .hidden-brand img {
+    border: none;
+    width: 180%;
+    height: auto;
+  }
+}

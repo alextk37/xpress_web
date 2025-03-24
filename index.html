@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xpress</title>
+    <!-- Подключаем Bootstrap -->
+    <link href="./styles/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/main-style.css" />
+    <link rel="stylesheet" href="./styles/menu.css" />
+  </head>
+  <body>
+    <div class="container-fluid p-0 gr">
+      <!-- Выпадающее меню -->
+      <div id="dropdown">
+        <button id="close-menu">✖</button>
+        <nav class="navigation">
+          <ul class="menu">
+            <li><a href="#" class="menu-item">Главная</a></li>
+            <li><a href="#" class="menu-item">О типографии</a></li>
+            <li><a href="#" class="menu-item">Новости</a></li>
+            <li><a href="#" class="menu-item">Контакты</a></li>
+          </ul>
+          <div class="map">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3Afdbb42739cc36f270f26b7e3cf4721ada59b88856adbfa2e9a9ca2b3d534ab38&amp;source=constructor"
+              width="100%"
+              height="350"
+              frameborder="0"
+            ></iframe>
+          </div>
+        </nav>
+      </div>
+      <!-- Header -->
+      <header class="container-fluid p-0">
+        <div class="row g-0">
+          <!-- Левый блок (3 части) -->
+          <div class="col-md-7 col-12 left-block header-block">
+            <!-- Блок с текстом -->
+            <div class="text-block mt-3">
+              <!-- Первое слово с иконкой -->
+              <div class="first-word">
+                <button id="burger-menu">
+                  <object
+                    id="burger-icon"
+                    type="image/svg+xml"
+                    data="./img/elements/close-burger.svg"
+                  ></object>
+                </button>
+                <!-- Иконка бургер-меню -->
+                <span>ЭКОЛОГИЯ</span>
+              </div>
+              <!-- Остальные слова -->
+              <div class="last-words">
+                <span>ЭСТЕТИКА</span>
+                <span>ЭФФЕКТИВНОСТЬ</span>
+              </div>
+
+              <div class="image-overlay">
+                <img src="./img/red-photo.png" alt="Печатная машина" />
+                <div class="overlay-text">
+                  Очень важный и интересный текст о типографии. Буквально
+                  несколько строчек.
+                </div>
+                <div class="hidden-brand">
+                  <img src="./img/elements/logo.png" alt="Логотип" />
+                  <div class="hidden-brand-text">
+                    <h2>полиграфический холдинг</h2>
+                    <p>
+                      Очень важный и интересный текст о типографии. Буквально
+                      несколько строчек.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Правый блок (2 части) -->
+          <div class="col-md-5 col-12 right-block header-block">
+            <div class="image-container">
+              <img
+                src="./img/dancers.png"
+                alt="Танцующие люди"
+                class="header-image"
+              />
+            </div>
+            <div class="brand-card">
+              <div class="image-content">
+                <img src="./img/print-mashine.png" alt="Печатная машина" />
+                <div class="black-rectangle"></div>
+              </div>
+              <div class="brand-content">
+                <img src="./img/elements/logo.png" alt="Логотип" />
+                <div class="description">полиграфический холдинг</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="features">
+        <div class="top-features">
+          <div class="top-features-card">
+            <h2>Экология</h2>
+            <div class="top-features-card-content">
+              <p>
+                Очень важный и интересный текст о типографии. Буквально
+                несколько строчек.
+              </p>
+              <img
+                src="./img/elements/top-card-image.png"
+                alt="Печатная машина"
+              />
+            </div>
+          </div>
+          <img src="./img/elements/stroke_top.png" alt="Элемент" />
+        </div>
+        <div class="middle-features">
+          <img src="./img/elements/stroke_middle.png" alt="Элемент" />
+          <div class="middle-features-black-rectangle">
+            <div class="question-block">
+              <p>Хочешь знать больше</p>
+              <span>?</span>
+            </div>
+          </div>
+          <div class="middle-features-card">
+            <h2>ЭСТЕТИКА</h2>
+            <div class="middle-features-card-content">
+              <p>
+                Очень важный и интересный текст о типографии. Буквально
+                несколько строчек.
+              </p>
+              <img src="./img/elements/middle-card-image.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-features">
+        <div class="bottom-features-card">
+          <h2>ЭФФЕКТИВНОСТЬ</h2>
+          <div class="bottom-features-card-content">
+            <div class="message-block">
+              <div class="message-block-content">
+                <span>?</span>
+                <div class="message-block-content-text">
+                  <p>Задай нам вопрос</p>
+                  <div class="message-block-content-icons"></div>
+                </div>
+              </div>
+              <form action="" class="message-block-form">
+                <input type="text" />
+                <input type="text" />
+                <button class="btn-primary">Оk</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/menu.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
