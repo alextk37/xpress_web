@@ -400,16 +400,18 @@
   margin-top: 100px;
   display: flex;
   align-items: flex-end;
-  gap: 70px;
+  gap: 40px;
 }
 
 .bottom-features-card-content-image {
-  height: 300px;
+  height: 350px;
 }
 
 .bottom-features-card-content-text {
   font-size: 18px;
   max-width: 200px;
+  margin-bottom: 130px;
+  margin-left: 40px;
   border-left: 3px solid white;
   padding-left: 10px;
 }
@@ -417,7 +419,7 @@
 .bottom-features-black-rectangle {
   position: absolute;
   right: -200px;
-  bottom: -260px;
+  bottom: -180px;
   width: 130px;
   height: 520px;
   background-color: black;
