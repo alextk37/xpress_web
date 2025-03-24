@@ -411,7 +411,7 @@
 .message-block-content span {
   position: absolute;
   right: 70%;
-  bottom: -65px;
+  bottom: -40px;
   font-family: "FRANKINITY", Arial, sans-serif;
   font-size: 140px;
 }
@@ -429,22 +429,29 @@
 }
 
 .message-block-content-icons {
+  display: flex;
+}
+
+.message-block-content-icons img {
+  width: 35px;
+  margin-bottom: 10px;
+  margin-right: 10px;
 }
 
 .message-block-form {
   display: flex;
-  flex-direction: column;
 }
 
 .message-block-form input {
   max-width: 80%;
-  margin-bottom: 5px;
+  height: 30px;
   border: 0;
   border-radius: 5px;
 }
 
 .message-block-form button {
   border: 0;
+  margin-left: 5px;
   border-radius: 5px;
   background-color: white;
   color: red;
