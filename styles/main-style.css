@@ -79,6 +79,24 @@
   margin-bottom: 40px;
 }
 
+#burger-menu.fixed {
+  position: fixed !important;
+  left: 30px;
+  right: 30px;
+  width: 100px;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный чёрный фон */
+  border-radius: 5%;
+  backdrop-filter: blur(30px); /* Применяем эффект блюра */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Легкая тень для выделения */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Плавные переходы */
+}
+
+#burger-menu.fixed:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Темнее при наведении */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Увеличение тени при наведении */
+}
+
 #burger-icon {
   display: block;
   height: 45px;
@@ -515,6 +533,14 @@
   width: 480px;
   height: 430px;
   background-color: #333333;
+  display: flex;
+  justify-content: center;
+}
+
+.first-step-card-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .second-step {
