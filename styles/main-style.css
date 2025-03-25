@@ -706,10 +706,56 @@
 .third-step-card {
   position: relative;
   z-index: -1;
-  width: 480px;
+  width: 500px;
   height: 430px;
   background-color: #333333;
 }
+
+.third-step-card-content {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 170px;
+}
+
+.third-step-card-content::before {
+  content: "3";
+  font-size: 300px;
+  font-family: "FRANKINITY", Arial, sans-serif;
+  position: absolute;
+  left: -72px;
+  top: 55px;
+  width: 55px;
+  height: 325px;
+  background-color: red;
+  display: flex;
+  align-items: start; /* Вертикальное выравнивание */
+  justify-content: flex-end; /* Горизонтальное выравнивание */
+}
+
+.third-step-card-content h2 {
+  height: 55px;
+  font-family: "FRANKINITY", Arial, sans-serif;
+  font-size: 90px;
+  margin-top: 70px;
+  margin-bottom: 5px;
+}
+
+.third-step-card-content p {
+  font-family: "Tenor", Arial, sans-serif;
+  font-size: 18px;
+  margin-bottom: 0px;
+  width: 60%;
+}
+
+.third-step-card-content span {
+  font-family: "Tenor", Arial, sans-serif;
+  font-size: 24px;
+  width: 61%;
+  margin-top: 20px;
+}
+
 
 .third-step-card::before {
   content: "";
