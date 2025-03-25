@@ -1,13 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Получаем элементы
   const burgerMenu = document.getElementById("burger-menu");
   const burgerIcon = document.getElementById("burger-icon");
   const dropdown = document.getElementById("dropdown");
   const closeMenu = document.getElementById("close-menu");
-
-  const whiteSrc = "./img/elements/close-burger-white.svg";
-  const redSrc = "./img/elements/close-burger-red.svg";
-
-  const triggerPoint = 60; // Высота, после которой кнопка фиксируется
+  const triggerPoint = 60;
 
   // Открытие/закрытие меню
   burgerMenu.addEventListener("click", function (event) {
@@ -15,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdown.classList.toggle("active");
   });
 
-  // Закрытие меню
   closeMenu.addEventListener("click", function () {
     dropdown.classList.remove("active");
   });
@@ -27,21 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Меняем иконку при наведении
-  burgerIcon.addEventListener("mouseenter", function () {
-    burgerIcon.src = redSrc;
-  });
-
-  burgerIcon.addEventListener("mouseleave", function () {
-    burgerIcon.src = whiteSrc;
-  });
-
-  // Отслеживание прокрутки и закрепление кнопки
+  // Фиксация кнопки при скролле
   window.addEventListener("scroll", function () {
     if (window.scrollY > triggerPoint) {
-      burgerMenu.classList.add("fixed"); // Добавляем фиксированное положение
+      burgerMenu.classList.add("fixed");
     } else {
-      burgerMenu.classList.remove("fixed"); // Возвращаем в начальное состояние
+      burgerMenu.classList.remove("fixed");
     }
   });
 });
