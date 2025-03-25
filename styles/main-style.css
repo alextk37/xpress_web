@@ -59,7 +59,7 @@
 }
 
 .image-container {
-  width: 100px; /* Ширина контейнера для изображения */
+  width: 100%; /* Ширина контейнера для изображения */
   margin-bottom: 10px; /* Отступ снизу */
 }
 
@@ -164,33 +164,35 @@
 }
 
 .brand-card {
+  overflow: hidden;
   position: absolute;
   top: 300px;
   left: -30%;
-  color: white;
-  padding: 15px 20px;
   display: flex;
   align-items: start;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
+  width: 130%;
+}
+
+.brand-card::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 345px;
   width: 100%;
+  height: 110px;
+  background-color: black;
 }
 
 .image-content {
   display: flex;
-  width: 130%;
+  width: 100%;
 }
 
-.image-content img {
+.header-right-image {
   height: 180px;
   width: auto;
-}
-
-.black-rectangle {
-  background-color: black;
-  margin-left: 15px;
-  height: 110px;
-  width: 100%;
 }
 
 .brand-content {
@@ -393,6 +395,16 @@
   color: white;
 }
 
+.bottom-features-card::before {
+  position: absolute;
+  content: "";
+  right: -200px;
+  bottom: -180px;
+  width: 130px;
+  height: 520px;
+  background-color: black;
+}
+
 .bottom-features-card h2 {
   position: absolute;
   font-family: "FRANKINITY", Arial, sans-serif;
@@ -419,15 +431,6 @@
   margin-left: 40px;
   border-left: 3px solid white;
   padding-left: 10px;
-}
-
-.bottom-features-black-rectangle {
-  position: absolute;
-  right: -200px;
-  bottom: -180px;
-  width: 130px;
-  height: 520px;
-  background-color: black;
 }
 
 .message-block {
@@ -517,7 +520,7 @@
 }
 
 .first-step-card {
-  width: 480px;
+  width: 500px;
   height: 430px;
   background-color: #333333;
   display: flex;
@@ -525,9 +528,77 @@
 }
 
 .first-step-card-content {
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
+  margin-left: 170px;
+}
+
+.first-step-card-content::before {
+  content: "1";
+  font-size: 300px;
+  font-family: "FRANKINITY", Arial, sans-serif;
+  position: absolute;
+  left: -72px;
+  top: 55px;
+  width: 55px;
+  height: 325px;
+  background-color: red;
+  display: flex;
+  align-items: start; /* Вертикальное выравнивание */
+  justify-content: flex-end; /* Горизонтальное выравнивание */
+}
+
+.first-step-card-content h2 {
+  height: 55px;
+  font-family: "FRANKINITY", Arial, sans-serif;
+  font-size: 90px;
+  margin-top: 70px;
+}
+
+.first-step-card-content p {
+  font-family: "Tenor", Arial, sans-serif;
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+.first-step-card-content span {
+  font-family: "Tenor", Arial, sans-serif;
+  font-size: 28px;
+  height: 28px;
+  margin-top: -10px;
+}
+
+.first-step-card-form {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.first-step-card-form input {
+  height: 30px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.btn-content {
+  display: flex;
+}
+
+.btn-content button {
+  position: absolute;
+  left: 218px;
+  z-index: -1;
+  color: white;
+  background-color: red;
+  height: 60px;
+  border: 0;
+  margin-top: -15px;
 }
 
 .second-step {
