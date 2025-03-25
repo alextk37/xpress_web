@@ -612,9 +612,71 @@
 
 .second-step-card {
   position: relative;
-  width: 480px;
+  width: 500px;
   height: 430px;
   background-color: red;
+}
+
+.second-step-card-content {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 170px;
+}
+
+.second-step-card-content::before {
+  content: "2";
+  font-size: 300px;
+  font-family: "FRANKINITY", Arial, sans-serif;
+  position: absolute;
+  left: -72px;
+  top: 55px;
+  width: 55px;
+  height: 325px;
+  background-color: #333333;
+  display: flex;
+  align-items: start; /* Вертикальное выравнивание */
+  justify-content: flex-end; /* Горизонтальное выравнивание */
+}
+
+.second-step-card-content h2 {
+  height: 55px;
+  font-family: "FRANKINITY", Arial, sans-serif;
+  font-size: 90px;
+  margin-top: 70px;
+}
+
+.second-step-card-content p {
+  font-family: "Tenor", Arial, sans-serif;
+  font-size: 18px;
+  margin-bottom: 0px;
+  width: 60%;
+}
+
+.second-step-card-content a {
+  position: relative;
+  display: flex;
+  font-family: "Tenor", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  width: 60%;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+}
+
+.second-step-card-content span {
+  position: absolute;
+  background-color: #333333;
+  color: white;
+  left: 235px;
+  top: 27px;
+  width: 65px;
+  height: 65px;
+  text-align: center;
+ 
 }
 
 .second-step-card::before {
