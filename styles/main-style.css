@@ -588,6 +588,7 @@
 
 .btn-content {
   display: flex;
+  width: 80%;
 }
 
 .btn-content button {
