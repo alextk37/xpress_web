@@ -786,7 +786,61 @@
   background: #333 url("../img/background/black-wood-texture.jpg") no-repeat
     center/cover;
   background-blend-mode: normal;
+  font-family: "Tenor", Arial, sans-serif;
   color: white;
+}
+
+.footer-nav {
+  display: flex;
+  width: 45%;
+  justify-content: center;
+  gap: 150px;
+}
+
+.footer-nav h2 {
+  font-size: 28px;
+}
+
+.footer-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 0px;
+}
+.footer-nav li {
+  list-style-type: none;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.footer-info-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-info-icons img {
+  width: 34px;
+}
+
+.footer-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-info-text img {
+  height: 40px;
+  width: auto;
 }
 
 /* Медиазапросы */
